@@ -2,7 +2,6 @@ package frogermcs.io.githubclient.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Debug;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +24,11 @@ import rx.android.widget.WidgetObservable;
 
 
 public class SplashActivity extends BaseActivity {
+
+    //Module是标记一个类（提供依赖的）
+    //Component 是提供一个将所有Module链接起来的的接口  相当于 Module和 Inject直接的桥梁
+    //Scope 只做一件事- 保持对象的单例 也用在Graph validation process
+    //Qualifier 限定符 在Module中为返回同一个实例的方法标记一个tag.类似用重写
 
     @Bind(R.id.etUsername)
     EditText etUsername;
